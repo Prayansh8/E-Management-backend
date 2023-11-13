@@ -1,7 +1,8 @@
 const { config } = require("../config");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
-const User = require("./modals/User");
+const Tenant = require("./modals/tenantModel");
+const User = require("./modals/userModel");
 
 dotenv.config();
 
@@ -16,7 +17,8 @@ const connect = async () => {
 connect();
 
 const db = {
-  user: User,
+  Tenant: Tenant,
+  User: User,
 };
 
 module.exports = { connect, db };

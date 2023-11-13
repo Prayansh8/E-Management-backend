@@ -1,3 +1,6 @@
+const dotenv = require("dotenv");
+dotenv.config();
+
 const config = {
   port: process.env.PORT || 5000,
   baseUrl: process.env.BASE_URI || "http://localhost",
