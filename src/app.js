@@ -10,10 +10,10 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.get("/", async (req, res) => {
-  // console.log(req.tenant.id);
+  // console.log(req.tenant);
 });
 
-app.use("/user", userRouter);
+app.use("/", userRouter);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
